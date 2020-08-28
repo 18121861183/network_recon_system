@@ -1,0 +1,88 @@
+{
+  "properties": [
+    {
+      "name": "network-recon.scan.zmap-result-path",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.zmap-result-path."
+    },
+    {
+      "name": "network-recon.scan.banner-save-path",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.banner-save-path."
+    },
+    {
+      "name": "network-recon.ftp.sftp-host",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.ftp.sftp-host."
+    },
+    {
+      "name": "network-recon.scan.report-save-path",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.report-save-path."
+    },
+    {
+      "name": "network-recon.scan.zmap-task-path",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.zmap-task-path."
+    },
+    {
+      "name": "network-recon.scan.temp-file-path",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.temp-file-path."
+    },
+    {
+      "name": "network-recon.scan.nmap-file-path",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.nmap-file-path."
+    },
+    {
+      "name": "network-recon.scan.record-max-ips",
+      "type": "java.lang.Integer",
+      "description": "Description for network-recon.scan.record-max-ips."
+    },
+    {
+      "name": "network-recon.scan.nmap-scan-rate",
+      "type": "java.lang.Integer",
+      "description": "Description for network-recon.scan.nmap-scan-rate."
+    },
+    {
+      "name": "network-recon.scan.normal-scan-rate",
+      "type": "java.lang.Integer",
+      "description": "Description for network-recon.scan.normal-scan-rate."
+    },
+    {
+      "name": "network-recon.scan.scan-task-summary",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.scan-task-summary."
+    },
+    {
+      "name": "network-recon.scan.center-url",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.scan.center-url."
+    },
+    {
+      "name": "network-recon.ftp.enable",
+      "type": "java.lang.Boolean",
+      "description": "Description for network-recon.ftp.enable."
+    },
+    {
+      "name": "network-recon.ftp.sftp-port",
+      "type": "java.lang.Integer",
+      "description": "Description for network-recon.ftp.sftp-port."
+    },
+    {
+      "name": "network-recon.ftp.sftp-username",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.ftp.sftp-username."
+    },
+    {
+      "name": "network-recon.ftp.sftp-password",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.ftp.sftp-password."
+    },
+    {
+      "name": "network-recon.ftp.sftp-remote",
+      "type": "java.lang.String",
+      "description": "Description for network-recon.ftp.sftp-remote."
+    }
+  ] }

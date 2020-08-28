@@ -1,0 +1,61 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:33066/network_recon?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: tipDB@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      # 数据库监控页面开启配置
+      web-stat-filter:
+        enabled: true
+      initial-size: 10
+      min-idle: 5
+      max-active: 200
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# 重置系统数据的验证密码
+administrators-password: IUAxMnFheldTWDM0
+
+network-recon:
+  scan:
+    zmap-result-path: /opt/recon/zmap/
+    banner-save-path: /opt/recon/zgrab/
+    report-save-path: /opt/recon/report/
+    zmap-task-path: /opt/recon/scan/
+    temp-file-path: /opt/recon/temp/
+    nmap-file-path: /opt/recon/fasts/
+    # 单个任务最大IP数量
+    record-max-ips: 10000
+    # 即时扫描的发包速度(速度越快准确率越低)
+    nmap-scan-rate: 1000
+    # 正常接收扫描的发包速度(考虑扫描效率和预留出上传结果的带宽后尽量设置最大)
+    normal-scan-rate: 10000
+    # 扫描任务概要信息存储路径
+    scan-task-summary: /opt/recon/summary/
+    # 回传中心url配置：
+    center-url: http://192.168.0.184:8083/mdp/upload4scan
+  ftp:
+    enable: false
+    # sftp相关配置
+    sftp-host: 192.168.0.1
+    sftp-port: 22333
+    sftp-username: root
+    sftp-password: 12!QAZ2wsx
+    sftp-remote: /data/scan-receive/d1/
+  forbidden-protocols:
+    - ftp
+    - ssh
+
+
+server:
+  port: 8888
+
+
+
+
+

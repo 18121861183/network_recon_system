@@ -1,0 +1,57 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'com.colasoft.tip.network'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+//configurations {
+//    compileOnly {
+//        extendsFrom annotationProcessor
+//    }
+//}
+
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    compile 'org.zeroturnaround:zt-exec:1.11'
+    compile 'com.alibaba:druid-spring-boot-starter:1.1.23'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.72'
+    compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.14'
+    compile group: 'com.github.seancfoley', name: 'ipaddress', version: '5.3.1'
+    compile group: 'org.apache.ant', name: 'ant', version: '1.10.8'
+    compile group: 'org.apache.commons', name: 'commons-csv', version: '1.8'
+    compile group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.12'
+    compile group: 'commons-httpclient', name: 'commons-httpclient', version: '3.1'
+
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'mysql:mysql-connector-java'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
